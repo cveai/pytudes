@@ -1,7 +1,10 @@
 한글로 배우는 Pytudes
 =====================
 
-- ipynb: Jupyter 노트북 원본 파일이 여기 있습니다.
+목차 보기
+---------
+
+번역이 완료된 Jupyter 노트북은 [여기](https://cynthia.github.io/pytudes/docs/)에 있습니다.
 
 번역 참여시
 -----------
