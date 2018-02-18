@@ -1,3 +1,22 @@
+한글로 배우는 Pytudes
+=====================
+
+- ipynb: Jupyter 노트북 원본 파일이 여기 있습니다.
+
+번역 참여시
+-----------
+
+- 비영리 목적 배포를 기준으로 합니다.
+- [원본 저장소](https://github.com/norvig/pytudes) 에서 번역 대상 노트북을 ipynb 디렉토리로 저장 후, 작업하시면 됩니다.
+- 노트북 최상단에 원본 refspec에 대한 정보를 남겨주셔야 합니다. (브랜치명이나 태그가 아닌 refspec 기준입니다.)
+
+새 파일 추가 방법
+-----------------
+
+    git checkout kr # 한글 브랜치로 전환
+    git checkout master ipynb/Filename.ipynb # 마스터 브랜치에서 파일 복사
+    git commit ipynb/Filename.ipynb # 해당 파일 우선 커밋
+
 # pytudes
 
 "An *étude* (a French word meaning *study*) is an instrumental musical composition, usually short, of considerable difficulty, and designed to provide practice material for perfecting a particular musical skill." &mdash; [Wikipedia](https://en.wikipedia.org/wiki/%C3%89tude)
