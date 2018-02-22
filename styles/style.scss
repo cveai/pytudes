@@ -1,0 +1,103 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(https://cdn.jsdelivr.net/gh/Joungkyun/font-d2coding@1.31.0/d2coding-ligature.min.css);
+
+$typography-scale: 1.250;
+$primary-color: #0074d9;
+$primary-font: "Spoqa Han Sans", sans-serif;
+$code-font: "D2 coding Ligature", monospace;
+$code-red: #cd3700;
+
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}
+
+/* All Jupyter NB cell */
+#notebook-container {
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.cell {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* Markdown Paragraphs are wrapped in `div.text_cell_render` */
+
+.text_cell_render {
+  padding: 0;
+
+  p, li {
+    margin-bottom: 1.3em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;
+    color: $primary-color;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: pow($typography-scale, 4) * 1em;
+    text-align: center;
+    font-weight: 100;
+  }
+
+  h2 {
+    font-size: pow($typography-scale, 3) * 1em;
+    padding-bottom: 0.3em;
+    border-bottom: 0.1em solid $primary-color;
+  }
+
+  h3 {
+    font-size: pow($typography-scale, 2) * 1em;
+  }
+
+  h4 {
+    font-size: $typography-scale * 1em;
+  }
+
+  .small {
+    font-size: 1em / $typography-scale;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+}
+
+/* Code Area */
+
+.rendered_html {
+  li code,
+  p code {
+    color: $code-red;
+  }
+}
+
+.input_area > div,
+.highlight {
+  font-family: $code-font;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+code,
+pre {
+  font-family: $code-font;
+}
